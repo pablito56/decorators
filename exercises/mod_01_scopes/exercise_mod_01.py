@@ -1,16 +1,6 @@
 #! /usr/bin/env python
 #-*- coding: utf-8 -*-
 u"""
-Created on Nov 13, 2012
-
-@author: pablito56
-
-@license: MIT
-
-@contact: pablito56@gmail.com
-
-Module 01 (scopes) exercise: implement a simple cache
-
 >>> import exercise_mod_01 as cache_mod
 
 >>> cache_mod.set_key("my_key", "my_value")
@@ -24,8 +14,9 @@ my_value
 >>> print cache_mod.get_key("not_found_key")
 None
 """
+
 #===============================================================================
-# EXERCISE:
+# EXERCISE: exercise_mod_01.py
 #
 # - Implement a simple in-memory cache:
 #     - Set and get a value associated to a key
@@ -40,11 +31,11 @@ None
 #===============================================================================
 
 
+import time
 # http://docs.python.org/2/library/time.html#time.time
 # current_unix_time = time.time()
-import time
-# http://docs.python.org/2/library/collections.html#ordereddict-objects
 from collections import OrderedDict
+# http://docs.python.org/2/library/collections.html#ordereddict-objects
 
 
 CACHE = {}

@@ -1,16 +1,6 @@
 #! /usr/bin/env python
 #-*- coding: utf-8 -*-
 u"""
-Created on Nov 13, 2012
-
-@author: pablito56
-
-@license: MIT
-
-@contact: pablito56@gmail.com
-
-Module 01 (scopes) exercise: tests
-
 >>> import exercise_mod_01 as cache_mod
 
 >>> cache_mod.set_key("my_key", "my_value")
@@ -24,6 +14,7 @@ my_value
 >>> print cache_mod.get_key("not_found_key")
 None
 """
+
 import unittest
 import exercise_mod_01 as cache_mod
 # import solution_mod_01 as cache_mod
