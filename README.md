@@ -34,35 +34,41 @@ Cleaning up...
 All the training content is written down in Python scripts and designed to be executed with [pydemo](https://github.com/pablito56/pydemo "pydemo GitHub repository") interactive interpreter:
 ```shell
 $ pydemo mod_00_welcome.py
-Loaded 1 files, 7 code blocks
-Python 2.7.2 (default, Oct 11 2012, 20:14:37)
-[GCC 4.2.1 Compatible Apple Clang 4.0 (tags/Apple/clang-418.0.60)] on darwin
+Loaded 1 files, 4 code blocks
+Python 2.7.6 (default, Sep  9 2014, 15:04:36)
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.39)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 (DemoHistoryConsole)
 >>>
-#-*- coding: utf-8 -*-
-'''
-MOD 00: What is Python?
-'''
-
-'\nMOD 00: What is Python?\n'
->>>
-#===============================================================================
-# EXERCISE: Execute the following command:
-#     $ python -c "import this"
-#===============================================================================
+#=======================================================
+#=======================================================
+#     Welcome to PYTHON OBJECTS ESSENTIALS training
+#=======================================================
+#=======================================================
 
 >>>
-#===============================================================================
-# From official website ( http://www.python.org/ ):
-#
-#     Python is a programming language that lets you work more quickly and integrate
-#     your systems more effectively. You can learn to use Python and see almost
-#     immediate gains in productivity and lower maintenance costs.
-#
-#===============================================================================
+#=======================================================
+# - REQUIREMENTS:
+#    - Code at https://github.com/pablito56/decorators
+#    - Follow README.md instructions
+#=======================================================
 
 >>>
+print "- BIO:"
+print "\tPablo Enfedaque Vidal"
+print "\t@pablitoev56"
+print "\tTechnical Manager @ Skyscanner"
+
+- BIO:
+	Pablo Enfedaque Vidal
+	@pablitoev56
+	Technical Manager @ Skyscanner
+>>>
+print "READY?"
+
+READY?
+>>>
+No more demo code available. Execute '%reload_files [FILENAMES]' to reload
 ```
 
 New explanations and examples will appear in the interpreter when pressing INTRO without introducing a command. It is also posible to manually execute other code to play around with the examples.
