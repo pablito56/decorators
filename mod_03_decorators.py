@@ -357,6 +357,17 @@ print call_fibonacci(30)
 
 
 #===============================================================================
+# EXERCISE: exercises/mod_03_decorators_2/exercise_mod_03_2.py
+#
+# - Implement a decorator which catches exceptions and returns None
+#
+# - Run the tests in 'tests_mod_03_2.py' executing 'nosetests -v' inside its folder
+#
+# - Check the solution in module 'solution_mod_03_2.py'
+#===============================================================================
+
+
+#===============================================================================
 # REFERENCES:
 #  - http://en.wikipedia.org/wiki/Decorator_pattern
 #  - http://stackoverflow.com/a/1594484
