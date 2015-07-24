@@ -1,14 +1,6 @@
 #! /usr/bin/env python
 #-*- coding: utf-8 -*-
 u"""
-Created on Nov 13, 2012
-
-@author: pablito56
-
-@license: MIT
-
-@contact: pablito56@gmail.com
-
 SIMCACHE: Simple In-Memory Cache
 
 >>> import simcache
@@ -26,6 +18,7 @@ my_value
 >>> print simcache.get_key("my_key")
 None
 """
+
 import time
 from collections import OrderedDict
 

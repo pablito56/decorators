@@ -205,6 +205,6 @@ print factorial(5)
 
 
 #===============================================================================
-# SOURCES:
+# REFERENCES:
 #  - http://docs.python.org/2/tutorial/classes.html#python-scopes-and-namespaces
 #===============================================================================

@@ -1,5 +1,3 @@
-#-*- coding: utf-8 -*-
-
 #===============================================================================
 # MOD 02: global, globals and locals
 #===============================================================================
@@ -91,7 +89,7 @@ print "AFTER func_a:", my_global_var
 func_b()
 print "AFTER func_b:", my_global_var  # Value was changed only in local scope
 
-#
+
 # What about this?
 def func_c():
     print "INSIDE func_c:", my_global_var
@@ -113,7 +111,7 @@ print "AFTER func_c:", my_global_var
 #    - There are some restrictions on how global names can be used
 #==============================================================================
 
-#
+
 #==============================================================================
 # - Python 'nonlocal' statement (ONLY IN Py3k!)
 #    - Listed identifiers refer to previously bound variables in the nearest enclosing scope
@@ -158,6 +156,15 @@ def func_b():
 func_b()
 
 
+def func_c():
+    g = globals()
+    for k in g:
+        if k != "__builtins__" and not k.startswith("_"):
+            print k, "==>", g[k]
+    print "-" * 5
+    print "new_global_var ==>", g.get("new_global_var", "???")
+
+
 #===============================================================================
 # EXERCISE:
 #
@@ -177,18 +184,10 @@ func_b()
 #===============================================================================
 
 
-def func_c():
-    g = globals()
-    for k in g:
-        if k != "__builtins__":
-            print k, "==>", g[k]
-    print "new_global_var ==>", g.get("new_global_var")
-
-
 #==============================================================================
 # - globals()
-#    - Return a dictionary representing the current global symbol table
-#    - This is always the dictionary of the current module (inside a function or
+#    - Return a dictionary-like object mapping the current global symbol table
+#    - This is always the mapping of the current module (inside a function or
 #      method, this is the module where it is defined, not the module from which
 #      it is called)
 #
@@ -198,8 +197,27 @@ def func_c():
 #==============================================================================
 
 
+def change_globals_locals():
+    g = globals()
+    l = locals()
+    g["another_global_var"] = 123
+    l["another_local_var"] = 980
+    print globals().keys()
+    print locals().keys()
+    print another_global_var
+    try:
+        print another_local_var
+    except Exception as e:
+        print "WOT?", e.__class__, e
+
+
+change_globals_locals()
+
+print another_global_var
+
+
 #===============================================================================
-# SOURCES:
+# REFERENCES:
 #  - http://docs.python.org/2/tutorial/classes.html#python-scopes-and-namespaces
 #  - http://docs.python.org/2/reference/simple_stmts.html#global
 #  - http://docs.python.org/3/reference/simple_stmts.html#nonlocal
